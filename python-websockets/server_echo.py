@@ -6,8 +6,10 @@ PORT =  7890
 
 print("Started server listening on Port " + str(PORT))
 
-async def echo(websocket, path):
+# setting websocket
+async def echo(websocket, path):  
   print("A client just connected")
+  #
   try:
       async for message in websocket:
           print("Received message from client: " + message)
